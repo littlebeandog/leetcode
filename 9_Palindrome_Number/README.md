@@ -1,0 +1,2 @@
+- Using tricks in python
+- Return false when input negative number(which seems meaningless...)
