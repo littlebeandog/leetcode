@@ -60,3 +60,37 @@ class Solution(object):
                     length[i] = length[i - 1] + 2 + length[i - length[i - 1] -2]
             max_len = max(max_len, length[i])
         return max_len
+
+# a very neat dp solution: https://leetcode.com/problems/longest-valid-parentheses/discuss/14312/My-ten-lines-python-solution
+class Solution(object):
+    def longestValidParentheses(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        length, stack = [0 for _ in range(len(s) + 1)], []
+        for i in range(len(s)):
+            if s[i] == '(':
+                stack.append(i)
+            else:
+                if stack:
+                    j = stack.pop()
+                    length[i + 1] = length[j] + (i - j + 1)
+        return max(length)
+
+# why we need an extra element in length list.
+class Solution(object):
+    def longestValidParentheses(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        length, stack = [0 for _ in range(len(s))], []
+        for i in range(len(s)):
+            if s[i] == '(':
+                stack.append(i)
+            else:
+                if stack:
+                    j = stack.pop()
+                    length[i] = length[j - 1] + (i - j + 1)
+        return max(length + [0])
