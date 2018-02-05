@@ -1,1 +1,2 @@
 - [] Figure out ralation between **Rotation**, **Reverse** and **Transpote** (reverse + trans = rotate)
+- [] 55. jump game solution, a very good article for dp
