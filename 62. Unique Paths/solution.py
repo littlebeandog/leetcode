@@ -12,4 +12,4 @@ class Solution(object):
                 dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
         return dp[n - 1][m - 1]
         
-# 
+# math permutation :https://leetcode.com/problems/unique-paths/discuss/22958/Math-solution-O(1)-space
