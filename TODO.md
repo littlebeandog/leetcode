@@ -1,2 +1,3 @@
 - [] Figure out ralation between **Rotation**, **Reverse** and **Transpote** (r```everse + trans = rotate)
 - [] 55. jump game solution, a very good article for dp
+- [] catalan number and application
