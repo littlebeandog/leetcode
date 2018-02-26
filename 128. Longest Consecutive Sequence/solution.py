@@ -1,3 +1,5 @@
+# Note that set in python is hash, looking up in set is O(1)
+
 class Solution(object):
     def longestConsecutive(self, nums):
         """
